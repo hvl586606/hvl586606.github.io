@@ -2,7 +2,7 @@
 
 import {PerspectiveCamera, Scene, WebGLRenderer} from "./build/three.module.js";
 import SolarSystem from "./SolarSystem.js";
-//import {VRButton} from "./build/VRButton";
+import {VRButton} from "./build/VRButton.js";
 
 export default class App {
     constructor() {
@@ -31,7 +31,7 @@ export default class App {
         //Oppretter Three.js Renderer
         this.renderer = new WebGLRenderer({canvas: canvas, context: context});
 
-        //document.body.append(VRButton.createButton(this.renderer));
+        document.body.append(VRButton.createButton(this.renderer));
 
         //Forteller renderer at den skal bruke svart farge til å male over når den skal begynne å tegne en ny frame
         this.renderer.setClearColor(0x000000);
